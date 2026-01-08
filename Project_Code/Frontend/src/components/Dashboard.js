@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import SumoCanvas from "./SumoCanvas";
+import BlockchainLogs from "./BlockchainLogs";
+import SignalNodeSelector from "./SignalNodeSelector";
 
 const API_BASE = "http://localhost:8000";
 
@@ -194,7 +196,12 @@ export default function Dashboard() {
         {/* SECTION 5 - Blockchain transactions */}
         <section className="card blockchain">
           <h3>Blockchain Transactions</h3>
-          <div className="block-top">
+
+          <SignalNodeSelector/>
+
+
+
+          {/* <div className="block-top">
             <label>
               Filter Node:
               <select value={selectedNode} onChange={(e) => { setSelectedNode(e.target.value); fetchEvents(e.target.value); }}>
@@ -216,7 +223,9 @@ export default function Dashboard() {
                 <div className="event-meta">{ev.tx_hash ?? ev.hash ?? ""} • {ev.timestamp ?? ""}</div>
               </div>
             ))}
-          </div>
+          </div> */}
+
+
 
         </section>
       </main>
