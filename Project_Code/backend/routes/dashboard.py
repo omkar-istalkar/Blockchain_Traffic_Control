@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from blockchain.blockchain import get_all_events
+from blockchain.blockchain import get_all_logs
 
 router = APIRouter()
 
